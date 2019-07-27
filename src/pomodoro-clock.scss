@@ -1,0 +1,100 @@
+body {
+    background: #a9a9a9;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+}
+
+#Container {
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+    "title title title"
+    "breakcontrol . sessioncontrol"
+    ". timer .";
+    grid-template-columns: auto;
+    grid-template-rows: 200px 200px 200px;
+}
+
+#app-title {
+    color: #fff5e5;
+    font-size: 5em;
+    margin: auto;
+    text-align: center;
+    grid-area: title;
+}
+
+#break-control {
+    grid-area: breakcontrol;
+}
+
+#session-control {
+    grid-area: sessioncontrol;
+}
+
+.timer-box {
+    display: flex;
+    grid-area: timer;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+
+    #timer-label {
+        font-size: 2em;
+        text-align: center;
+        min-width: 100%;
+    }
+
+    #time-left {
+        font-size: 4em;
+        text-align: center;
+        min-width: 100%;
+    }
+}
+
+@keyframes icon-size{
+    from{
+        font-size: 3em;
+    }
+
+    to{
+        font-size: 4em;
+    }
+}
+
+.icon {        
+    color: #0073ff;
+    font-size: 3em;
+    transition: font-size 0.5s;
+}
+
+.icon:hover {
+    color: darkorange;
+    font-size: 4em;
+    transition: font-size 0.5s;
+}
+
+.duration-control {
+    display: flex;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;    
+
+    #break-label,#session-label{
+        font-size: 2em;
+        min-width: 100%;
+        text-align: center;
+    }
+
+    #break-length,#session-length {
+        order: 2;
+        font-size: 2em;
+    }
+
+    #break-increment,#session-increment{
+        order:3;
+    }
+}
