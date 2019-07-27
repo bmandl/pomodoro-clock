@@ -41,7 +41,7 @@ class Timer extends React.Component {
                     <i className="fas fa-play" />
                     <i className="fas fa-pause" />
                 </div>                
-                <div id="reset" onClick={this.props.reset}><i className="icon fas fa-sync-alt"  /></div>
+                <div id="reset" onClick={this.props.reset}><i className="icon fas fa-sync-alt" /></div>
             </div>
         );
     }

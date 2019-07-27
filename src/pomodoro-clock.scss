@@ -2,13 +2,16 @@ body {
     background: #a9a9a9;
     color: #fff;
     display: flex;
+    height: 100vh;
     justify-content: center;
-    align-items: stretch;
-    align-content: center;
+    align-items: center;
 }
 
 #Container {
-    margin: auto;
+    padding: 0 20px 10px 20px;
+    border: 3px solid black;
+    border-radius: 20px;    
+    box-shadow: 10px 7px 9px -7px rgba(0,0,0,0.75);    
     display: grid;
     grid-template-areas:
     "title title title"
@@ -16,6 +19,7 @@ body {
     ". timer .";
     grid-template-columns: auto;
     grid-template-rows: 200px 200px 200px;
+    align-content: space-around;
 }
 
 #app-title {
@@ -54,16 +58,6 @@ body {
     }
 }
 
-@keyframes icon-size{
-    from{
-        font-size: 3em;
-    }
-
-    to{
-        font-size: 4em;
-    }
-}
-
 .icon {        
     color: #0073ff;
     font-size: 3em;
@@ -77,6 +71,7 @@ body {
 }
 
 .duration-control {
+    border: 1px solid black;
     display: flex;
     width: 300px;
     justify-content: space-around;
